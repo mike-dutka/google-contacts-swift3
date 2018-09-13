@@ -34,6 +34,7 @@
 		74F2613E1E00901A0021AA75 /* Google_Contacts_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2613D1E00901A0021AA75 /* Google_Contacts_ViewerUITests.swift */; };
 		74FC12B81E08D8FF00A0AA6E /* contacts_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC12B71E08D8FF00A0AA6E /* contacts_big@2x.png */; };
 		90B4D459288B561D6A2E6E2B /* Pods_Google_Contacts_ViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78D231ADBBCC60716C76CA9 /* Pods_Google_Contacts_ViewerTests.framework */; };
+		B509756B214A940700C2CFF6 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509756A214A940600C2CFF6 /* BlockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		8F828143DF5F6E261C8C9D03 /* Pods_Google_Contacts_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Contacts_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D1EBF0E6BDCA347B83485D /* Pods-Google Contacts Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer.release.xcconfig"; sourceTree = "<group>"; };
 		A78D231ADBBCC60716C76CA9 /* Pods_Google_Contacts_ViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Contacts_ViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B509756A214A940600C2CFF6 /* BlockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
 		C81E59BE0E37A4485205D628 /* Pods-Google Contacts ViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts ViewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts ViewerUITests/Pods-Google Contacts ViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7ED805116FA5FFF4F03EEE8 /* Pods-Google Contacts ViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts ViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts ViewerUITests/Pods-Google Contacts ViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,12 +218,13 @@
 		74F261191E0090190021AA75 /* Google Contacts Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				B509756A214A940600C2CFF6 /* BlockView.swift */,
+				74F2611A1E0090190021AA75 /* AppDelegate.swift */,
 				7487B5841E07717700D4CB9B /* AllContacts */,
 				7487B57F1E076A1200D4CB9B /* Common */,
 				742ACA5C1E08721100EB744B /* NavigationController */,
 				7487B5791E0759F600D4CB9B /* Network */,
 				7458378F1E08826F000935B2 /* ViewContact */,
-				74F2611A1E0090190021AA75 /* AppDelegate.swift */,
 				74F261241E0090190021AA75 /* Assets.xcassets */,
 				74D412EB1E009995002E68FB /* Bridging-Header.h */,
 				74F261211E0090190021AA75 /* Google_Contacts_Viewer.xcdatamodeld */,
@@ -305,8 +308,6 @@
 				74F2612A1E0090190021AA75 /* Sources */,
 				74F2612B1E0090190021AA75 /* Frameworks */,
 				74F2612C1E0090190021AA75 /* Resources */,
-				A53D019532A0F0B8CE741DE0 /* [CP] Embed Pods Frameworks */,
-				0E364555AF532B8259318698 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,8 +327,6 @@
 				74F261351E00901A0021AA75 /* Sources */,
 				74F261361E00901A0021AA75 /* Frameworks */,
 				74F261371E00901A0021AA75 /* Resources */,
-				C44DF983C7347B4620055D0B /* [CP] Embed Pods Frameworks */,
-				71DB64817FF1EF472DA62555 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -350,7 +349,7 @@
 				TargetAttributes = {
 					74F261161E0090190021AA75 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = J8HX8YBEEF;
+						DevelopmentTeam = VMRKSX5B84;
 						ProvisioningStyle = Automatic;
 					};
 					74F2612D1E0090190021AA75 = {
@@ -422,49 +421,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E364555AF532B8259318698 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts ViewerTests/Pods-Google Contacts ViewerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5F0A749966E9EBD433213B44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google Contacts ViewerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		71DB64817FF1EF472DA62555 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts ViewerUITests/Pods-Google Contacts ViewerUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		866F6A4A8C788E686EBA1CFC /* [CP] Embed Pods Frameworks */ = {
@@ -473,28 +445,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CRToast/CRToast.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/libPhoneNumber-iOS/libPhoneNumber_iOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRToast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhoneNumber_iOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A53D019532A0F0B8CE741DE0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts ViewerTests/Pods-Google Contacts ViewerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4EA81CACD5349D2FA669B8A /* [CP] Check Pods Manifest.lock */ = {
@@ -503,13 +473,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google Contacts ViewerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2BECBFDE60807B0E0469DCB /* [CP] Copy Pods Resources */ = {
@@ -518,28 +491,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C44DF983C7347B4620055D0B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts ViewerUITests/Pods-Google Contacts ViewerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF67F3ED86257E6CF61BBBFF /* [CP] Check Pods Manifest.lock */ = {
@@ -548,13 +509,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google Contacts Viewer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -567,6 +531,7 @@
 				745837931E089662000935B2 /* ContactCell.swift in Sources */,
 				74F2611D1E0090190021AA75 /* ViewController.swift in Sources */,
 				74F2611B1E0090190021AA75 /* AppDelegate.swift in Sources */,
+				B509756B214A940700C2CFF6 /* BlockView.swift in Sources */,
 				7487B57B1E075A0700D4CB9B /* NetworkController.swift in Sources */,
 				7487B5931E0785EF00D4CB9B /* FetchDelegate.swift in Sources */,
 				7458F7CF1E874F8200F98951 /* TransitionAnimator.swift in Sources */,
@@ -654,6 +619,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = E664365WAF;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -703,6 +669,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = E664365WAF;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -726,12 +693,15 @@
 			baseConfigurationReference = 68719316DB7DE347336FA756 /* Pods-Google Contacts Viewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J8HX8YBEEF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMRKSX5B84;
 				INFOPLIST_FILE = "Google Contacts Viewer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.contactsapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdut.contactsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google Contacts Viewer/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -742,12 +712,15 @@
 			baseConfigurationReference = 92D1EBF0E6BDCA347B83485D /* Pods-Google Contacts Viewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J8HX8YBEEF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMRKSX5B84;
 				INFOPLIST_FILE = "Google Contacts Viewer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.contactsapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdut.contactsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google Contacts Viewer/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

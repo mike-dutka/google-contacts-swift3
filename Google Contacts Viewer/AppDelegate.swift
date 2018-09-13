@@ -13,13 +13,34 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var contactsHandler: ContactsHandler = ContactsHandler()
+    var contactsHandler: ContactsHandler!
+    
+    lazy private var blockView: BlockView = {
+        let v = BlockView()
+        v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        return v
+    }()
+    
+    private func hide() {
+        guard blockView.superview == nil else{
+            return
+        }
+        
+        if let win = self.window?.rootViewController?.view {//UIApplication.sharedApplication().keyWindow!
+            blockView.frame = win.bounds
+            win.addSubview(blockView)
+            win.bringSubview(toFront: blockView)
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        contactsHandler  = ContactsHandler()
+        hide()
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
+        hide()
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
@@ -30,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        hide()
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
@@ -38,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+        hide()
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()

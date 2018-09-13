@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '10.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -9,7 +9,7 @@ target 'Google Contacts Viewer' do
   use_frameworks!
 
   # Pods for Google Contacts Viewer
-  pod 'Google/SignIn'
+  pod 'GoogleSignIn'
   pod 'CRToast', '~> 0.0.9'
   pod 'SDWebImage', '~>3.8'
   pod 'libPhoneNumber-iOS'

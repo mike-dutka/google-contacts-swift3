@@ -13,7 +13,7 @@ let MainScreenHeight: CGFloat = UIScreen.main.bounds.size.height
 // Google constants
 let Scope = "https://www.googleapis.com/auth/contacts.readonly"
 let ContactsEndPointURLString = "https://www.google.com/m8/feeds/contacts/default/thin?max-results=10000"
-let ClientId = "320514292958-4kka29okfipsq616dlpe68jvq5c2vjch.apps.googleusercontent.com"
+let ClientId = "813589489238-pl0vt4n23smnrpipm2b4foosk9cq5b5h.apps.googleusercontent.com"
 
 // UserDefault Keys
 let UserAccessToken = "UserAccessToken"

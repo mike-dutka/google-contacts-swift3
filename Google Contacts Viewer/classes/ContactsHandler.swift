@@ -11,6 +11,25 @@ import CoreData
 import SDWebImage
 import libPhoneNumber_iOS
 
+extension String {
+    var unescaped: String {
+        let entities = ["\0": "\\0",
+                        "\t": "\\t",
+                        "\n": "\\n",
+                        "\r": "\\r",
+                        "\"": "\\\"",
+                        "\'": "\\'",
+                        ]
+        
+        return entities
+            .reduce(self) { (string, entity) in
+                string.replacingOccurrences(of: entity.value, with: entity.key)
+            }
+            .replacingOccurrences(of: "\\\\(?!\\\\)", with: "", options: .regularExpression)
+            .replacingOccurrences(of: "\\\\", with: "\\")
+    }
+}
+
 class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
     
     private var networkController : NetworkController!
@@ -26,8 +45,6 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
         super.init()
         
         // Initialize sign-in
-        var configureError: NSError?
-        GGLContext.sharedInstance().configureWithError(&configureError)
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().scopes = [Scope]
         GIDSignIn.sharedInstance().clientID = ClientId
@@ -66,18 +83,13 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
     public func loadContacts() {
         let contactsURL : NSURL = NSURL(string: ContactsEndPointURLString)!
         self.networkController.sendRequestToURL(url: contactsURL, completion: { (data, response, error) -> () in
-            if (response?.statusCode == 200 && error == nil) {
-                
-                DispatchQueue.global(qos: .background).async {
-                    let delegate = UIApplication.shared.delegate as! AppDelegate
-                    self.context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-                    self.context.parent = delegate.persistentContainer.viewContext
-                    
-                    self.parseContactsFromData(data: data!)
-                }
-                
-            } else {
-            }
+            guard response?.statusCode == 200 && error == nil else {return}
+            
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            self.context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+            self.context.parent = delegate.persistentContainer.viewContext
+            
+            self.parseContactsFromData(data: data!)
         })
     }
     
@@ -119,6 +131,9 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
         
         if elementName == "entry" {
             self.currentObject = GoogleContact(context: self.context)
+            
+            let tag = attributeDict["gd:etag"] as! String
+            self.currentObject?.tag = tag
         }
     }
     
@@ -147,7 +162,7 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
             let fmt = NBPhoneNumberUtil()
             do {
                 var nb_number: NBPhoneNumber? = nil
-                try nb_number = fmt.parse(self.parsingBuffer, defaultRegion: "US")
+                try nb_number = fmt.parse(self.parsingBuffer, defaultRegion: "UA")
                 try self.parsingBuffer = fmt.format(nb_number!, numberFormat: .INTERNATIONAL)
             } catch let error as NSError {
                 NSLog("error")

@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import Google
+import GoogleSignIn
 import CoreData
 import SDWebImage
 import CRToast
