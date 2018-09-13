@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Google Contacts Viewer.xcodeproj">
+      location = "group:/Users/mdut/Documents/tmp/contacts/ContactsApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -74,7 +74,7 @@
 		7487B59F1E07A82D00D4CB9B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = images/settings.png; sourceTree = "<group>"; };
 		7487B5A01E07A82D00D4CB9B /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@3x.png"; path = "images/settings@3x.png"; sourceTree = "<group>"; };
 		74D412EB1E009995002E68FB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		74F261171E0090190021AA75 /* Google Contacts Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google Contacts Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F261171E0090190021AA75 /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F2611A1E0090190021AA75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F2611C1E0090190021AA75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74F2611F1E0090190021AA75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,10 +82,10 @@
 		74F261241E0090190021AA75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74F261271E0090190021AA75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74F261291E0090190021AA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74F2612E1E0090190021AA75 /* Google Contacts ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Google Contacts ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F2612E1E0090190021AA75 /* ContactsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F261321E00901A0021AA75 /* Google_Contacts_ViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_Contacts_ViewerTests.swift; sourceTree = "<group>"; };
 		74F261341E00901A0021AA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74F261391E00901A0021AA75 /* Google Contacts ViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Google Contacts ViewerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F261391E00901A0021AA75 /* ContactsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F2613D1E00901A0021AA75 /* Google_Contacts_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_Contacts_ViewerUITests.swift; sourceTree = "<group>"; };
 		74F2613F1E00901A0021AA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FC12B71E08D8FF00A0AA6E /* contacts_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contacts_big@2x.png"; path = "images/contacts_big@2x.png"; sourceTree = "<group>"; };
@@ -208,9 +208,9 @@
 		74F261181E0090190021AA75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74F261171E0090190021AA75 /* Google Contacts Viewer.app */,
-				74F2612E1E0090190021AA75 /* Google Contacts ViewerTests.xctest */,
-				74F261391E00901A0021AA75 /* Google Contacts ViewerUITests.xctest */,
+				74F261171E0090190021AA75 /* ContactsApp.app */,
+				74F2612E1E0090190021AA75 /* ContactsAppTests.xctest */,
+				74F261391E00901A0021AA75 /* ContactsAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,9 +280,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74F261161E0090190021AA75 /* Google Contacts Viewer */ = {
+		74F261161E0090190021AA75 /* ContactsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74F261421E00901A0021AA75 /* Build configuration list for PBXNativeTarget "Google Contacts Viewer" */;
+			buildConfigurationList = 74F261421E00901A0021AA75 /* Build configuration list for PBXNativeTarget "ContactsApp" */;
 			buildPhases = (
 				FF67F3ED86257E6CF61BBBFF /* [CP] Check Pods Manifest.lock */,
 				74F261131E0090190021AA75 /* Sources */,
@@ -295,14 +295,14 @@
 			);
 			dependencies = (
 			);
-			name = "Google Contacts Viewer";
+			name = ContactsApp;
 			productName = "Google Contacts Viewer";
-			productReference = 74F261171E0090190021AA75 /* Google Contacts Viewer.app */;
+			productReference = 74F261171E0090190021AA75 /* ContactsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		74F2612D1E0090190021AA75 /* Google Contacts ViewerTests */ = {
+		74F2612D1E0090190021AA75 /* ContactsAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74F261451E00901A0021AA75 /* Build configuration list for PBXNativeTarget "Google Contacts ViewerTests" */;
+			buildConfigurationList = 74F261451E00901A0021AA75 /* Build configuration list for PBXNativeTarget "ContactsAppTests" */;
 			buildPhases = (
 				5F0A749966E9EBD433213B44 /* [CP] Check Pods Manifest.lock */,
 				74F2612A1E0090190021AA75 /* Sources */,
@@ -314,14 +314,14 @@
 			dependencies = (
 				74F261301E0090190021AA75 /* PBXTargetDependency */,
 			);
-			name = "Google Contacts ViewerTests";
+			name = ContactsAppTests;
 			productName = "Google Contacts ViewerTests";
-			productReference = 74F2612E1E0090190021AA75 /* Google Contacts ViewerTests.xctest */;
+			productReference = 74F2612E1E0090190021AA75 /* ContactsAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		74F261381E00901A0021AA75 /* Google Contacts ViewerUITests */ = {
+		74F261381E00901A0021AA75 /* ContactsAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74F261481E00901A0021AA75 /* Build configuration list for PBXNativeTarget "Google Contacts ViewerUITests" */;
+			buildConfigurationList = 74F261481E00901A0021AA75 /* Build configuration list for PBXNativeTarget "ContactsAppUITests" */;
 			buildPhases = (
 				B4EA81CACD5349D2FA669B8A /* [CP] Check Pods Manifest.lock */,
 				74F261351E00901A0021AA75 /* Sources */,
@@ -333,9 +333,9 @@
 			dependencies = (
 				74F2613B1E00901A0021AA75 /* PBXTargetDependency */,
 			);
-			name = "Google Contacts ViewerUITests";
+			name = ContactsAppUITests;
 			productName = "Google Contacts ViewerUITests";
-			productReference = 74F261391E00901A0021AA75 /* Google Contacts ViewerUITests.xctest */;
+			productReference = 74F261391E00901A0021AA75 /* ContactsAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -366,7 +366,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74F261121E0090190021AA75 /* Build configuration list for PBXProject "Google Contacts Viewer" */;
+			buildConfigurationList = 74F261121E0090190021AA75 /* Build configuration list for PBXProject "ContactsApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -379,9 +379,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74F261161E0090190021AA75 /* Google Contacts Viewer */,
-				74F2612D1E0090190021AA75 /* Google Contacts ViewerTests */,
-				74F261381E00901A0021AA75 /* Google Contacts ViewerUITests */,
+				74F261161E0090190021AA75 /* ContactsApp */,
+				74F2612D1E0090190021AA75 /* ContactsAppTests */,
+				74F261381E00901A0021AA75 /* ContactsAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -565,12 +565,12 @@
 /* Begin PBXTargetDependency section */
 		74F261301E0090190021AA75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74F261161E0090190021AA75 /* Google Contacts Viewer */;
+			target = 74F261161E0090190021AA75 /* ContactsApp */;
 			targetProxy = 74F2612F1E0090190021AA75 /* PBXContainerItemProxy */;
 		};
 		74F2613B1E00901A0021AA75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74F261161E0090190021AA75 /* Google Contacts Viewer */;
+			target = 74F261161E0090190021AA75 /* ContactsApp */;
 			targetProxy = 74F2613A1E00901A0021AA75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -738,7 +738,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.contactsapp.Google-Contacts-ViewerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Google Contacts Viewer.app/Google Contacts Viewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactsApp.app/ContactsApp";
 			};
 			name = Debug;
 		};
@@ -754,7 +754,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.contactsapp.Google-Contacts-ViewerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Google Contacts Viewer.app/Google Contacts Viewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactsApp.app/ContactsApp";
 			};
 			name = Release;
 		};
@@ -791,7 +791,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74F261121E0090190021AA75 /* Build configuration list for PBXProject "Google Contacts Viewer" */ = {
+		74F261121E0090190021AA75 /* Build configuration list for PBXProject "ContactsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F261401E00901A0021AA75 /* Debug */,
@@ -800,7 +800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74F261421E00901A0021AA75 /* Build configuration list for PBXNativeTarget "Google Contacts Viewer" */ = {
+		74F261421E00901A0021AA75 /* Build configuration list for PBXNativeTarget "ContactsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F261431E00901A0021AA75 /* Debug */,
@@ -809,7 +809,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74F261451E00901A0021AA75 /* Build configuration list for PBXNativeTarget "Google Contacts ViewerTests" */ = {
+		74F261451E00901A0021AA75 /* Build configuration list for PBXNativeTarget "ContactsAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F261461E00901A0021AA75 /* Debug */,
@@ -818,7 +818,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74F261481E00901A0021AA75 /* Build configuration list for PBXNativeTarget "Google Contacts ViewerUITests" */ = {
+		74F261481E00901A0021AA75 /* Build configuration list for PBXNativeTarget "ContactsAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F261491E00901A0021AA75 /* Debug */,
