@@ -157,7 +157,7 @@ class ViewContactViewController: UITableViewController, MFMailComposeViewControl
     
     // Call phone number
     private func callNumber(phoneNumber:String) {
-        if let phoneCallURL:URL = URL(string: "tel://\(phoneNumber)") {
+        if let phoneCallURL:URL = URL(string: "tel://\(phoneNumber.replacingOccurrences(of: " ", with: ""))") {
             let application:UIApplication = UIApplication.shared
             if (application.canOpenURL(phoneCallURL)) {
                 application.open(phoneCallURL, options: [:], completionHandler: nil)
