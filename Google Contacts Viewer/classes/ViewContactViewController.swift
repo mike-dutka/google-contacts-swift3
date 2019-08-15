@@ -123,20 +123,9 @@ class ViewContactViewController: UITableViewController, MFMailComposeViewControl
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.section == 0 {
-            let alert = UIAlertController(title: "Confirm", message: "Call this number?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Yes", style: .default) { (action) in
-                let number = (self.doc.numbers![indexPath.row] as! PhoneNumber).number!
-                self.callNumber(phoneNumber: number)
-                alert.dismiss(animated: true, completion: nil)
-            }
-            let cancel = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
-                alert.dismiss(animated: true, completion: nil)
-            }
-            alert.addAction(ok)
-            alert.addAction(cancel)
-            self.navigationController?.present(alert, animated: true, completion: nil)
+            let number = (self.doc.numbers![indexPath.row] as! PhoneNumber).number!
+            self.callNumber(phoneNumber: number)
         } else {
-            
             let mailComposeViewController = self.configuredMailComposeViewController(email: self.doc.email!)
             if !(mailComposeViewController != nil && MFMailComposeViewController.canSendMail()) {
                 // If it's nil then there is a system dialog already

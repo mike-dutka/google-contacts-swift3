@@ -179,6 +179,9 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
                 self.currentObject!.setValue(self.parsingAttributes["href"]! as String, forKey: "url")
                 NSLog("%@", self.parsingAttributes["href"]! as String)
             }
+        } else if elementName == "gContact:groupMembershipInfo" {
+            //contact is in group
+            self.currentObject?.isInGroup = true
         }
     }
 }

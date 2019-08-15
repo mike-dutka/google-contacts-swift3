@@ -15,7 +15,6 @@ import CRToast
 
 class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationControllerDelegate {
 
-    let animator = TransitionAnimator()
     static let cacheName: String? = "ViewControllerCacheName"
     private var fetchDelegate: FetchDelegate?
     private var _fetchedResultsController: NSFetchedResultsController<GoogleContact>?
@@ -27,12 +26,13 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
                 
                 let query = NSFetchRequest<GoogleContact>(entityName: "GoogleContact")
                 query.sortDescriptors = [
+                    NSSortDescriptor(key: "isInGroup", ascending: false),
                     NSSortDescriptor(key: "name", ascending: true),
                     NSSortDescriptor(key: "email", ascending: true),
                     NSSortDescriptor(key: "primaryPhoneNumber", ascending: true)
                 ]
                 
-                _fetchedResultsController = NSFetchedResultsController(fetchRequest: query, managedObjectContext: context, sectionNameKeyPath: "name", cacheName: ViewController.cacheName)
+                _fetchedResultsController = NSFetchedResultsController(fetchRequest: query, managedObjectContext: context, sectionNameKeyPath: "isInGroup", cacheName: ViewController.cacheName)
                 fetchDelegate = FetchDelegate(tableView: self.tableView)
                 _fetchedResultsController?.delegate = fetchDelegate
             }
@@ -171,18 +171,15 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "⭐️" : nil
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
         let doc: GoogleContact = self.fetchedResultsController.object(at: indexPath as IndexPath)
         let controller = ViewContactViewController(coreDataId: doc.objectID)
         self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if (operation == UINavigationController.Operation.push) {
-            return self.animator
-        }
-        return nil
     }
 }
