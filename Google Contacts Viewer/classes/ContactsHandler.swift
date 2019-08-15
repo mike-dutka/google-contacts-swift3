@@ -181,7 +181,9 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
             }
         } else if elementName == "gContact:groupMembershipInfo" {
             //contact is in group
-            self.currentObject?.isInGroup = true
+            if let groupRef = self.parsingAttributes["href"], groupRef.isEmpty == false, groupRef.hasSuffix("/base/6") == false {
+                self.currentObject?.isInGroup = true
+            }
         }
     }
 }
