@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3866056354719C1DAEAE4ADC /* Pods_Google_Contacts_ViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7291190E2A198F8019F5FE /* Pods_Google_Contacts_ViewerUITests.framework */; };
-		5B2ABC0DC583584D8F3B9E6C /* Pods_Google_Contacts_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F828143DF5F6E261C8C9D03 /* Pods_Google_Contacts_Viewer.framework */; };
+		4F97128DBAFA0E69D0D39AC5 /* Pods_ContactsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667FE5B0B4BF9EE272F95BB5 /* Pods_ContactsAppTests.framework */; };
+		53763AC139FA22A941D25E3A /* Pods_ContactsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78039EB9183952AA4014FA4F /* Pods_ContactsApp.framework */; };
 		742ACA5B1E0871BB00EB744B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742ACA5A1E0871BB00EB744B /* UIColor.swift */; };
 		742ACA5E1E08722F00EB744B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742ACA5D1E08722F00EB744B /* CustomNavigationController.swift */; };
 		745837911E088317000935B2 /* ViewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745837901E088317000935B2 /* ViewContactViewController.swift */; };
@@ -33,7 +33,7 @@
 		74F261331E00901A0021AA75 /* Google_Contacts_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F261321E00901A0021AA75 /* Google_Contacts_ViewerTests.swift */; };
 		74F2613E1E00901A0021AA75 /* Google_Contacts_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F2613D1E00901A0021AA75 /* Google_Contacts_ViewerUITests.swift */; };
 		74FC12B81E08D8FF00A0AA6E /* contacts_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FC12B71E08D8FF00A0AA6E /* contacts_big@2x.png */; };
-		90B4D459288B561D6A2E6E2B /* Pods_Google_Contacts_ViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78D231ADBBCC60716C76CA9 /* Pods_Google_Contacts_ViewerTests.framework */; };
+		AB3887C29B60051696A0EB67 /* Pods_ContactsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A64E5A6F94AFEAB6338BBC5 /* Pods_ContactsAppUITests.framework */; };
 		B509756B214A940700C2CFF6 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509756A214A940600C2CFF6 /* BlockView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051280512868AFD621AA194B /* Pods-ContactsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsAppUITests/Pods-ContactsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1D9CF4E9D4D67CA2E5337ABA /* Pods-Google Contacts ViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts ViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts ViewerTests/Pods-Google Contacts ViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2A7291190E2A198F8019F5FE /* Pods_Google_Contacts_ViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Contacts_ViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C6CEFDEA3CB099BE516408D /* Pods-ContactsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsApp/Pods-ContactsApp.release.xcconfig"; sourceTree = "<group>"; };
+		2F78629AF4175DCC9ED12154 /* Pods-ContactsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsAppTests/Pods-ContactsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A64E5A6F94AFEAB6338BBC5 /* Pods_ContactsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CE9B5D21D793F6D6B5CDEC /* Pods-ContactsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsAppUITests/Pods-ContactsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		667FE5B0B4BF9EE272F95BB5 /* Pods_ContactsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68719316DB7DE347336FA756 /* Pods-Google Contacts Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		742ACA5A1E0871BB00EB744B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = classes/UIColor.swift; sourceTree = "<group>"; };
 		742ACA5D1E08722F00EB744B /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomNavigationController.swift; path = classes/CustomNavigationController.swift; sourceTree = "<group>"; };
@@ -89,13 +94,14 @@
 		74F2613D1E00901A0021AA75 /* Google_Contacts_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_Contacts_ViewerUITests.swift; sourceTree = "<group>"; };
 		74F2613F1E00901A0021AA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FC12B71E08D8FF00A0AA6E /* contacts_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contacts_big@2x.png"; path = "images/contacts_big@2x.png"; sourceTree = "<group>"; };
+		78039EB9183952AA4014FA4F /* Pods_ContactsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		851E1625D44ECD3580AE31F1 /* Pods-Google Contacts ViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts ViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts ViewerTests/Pods-Google Contacts ViewerTests.release.xcconfig"; sourceTree = "<group>"; };
-		8F828143DF5F6E261C8C9D03 /* Pods_Google_Contacts_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Contacts_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D1EBF0E6BDCA347B83485D /* Pods-Google Contacts Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer.release.xcconfig"; sourceTree = "<group>"; };
-		A78D231ADBBCC60716C76CA9 /* Pods_Google_Contacts_ViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Contacts_ViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509756A214A940600C2CFF6 /* BlockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
 		C81E59BE0E37A4485205D628 /* Pods-Google Contacts ViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts ViewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts ViewerUITests/Pods-Google Contacts ViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9439EB07C7074FE9246B4A8 /* Pods-ContactsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsApp/Pods-ContactsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F7ED805116FA5FFF4F03EEE8 /* Pods-Google Contacts ViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google Contacts ViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google Contacts ViewerUITests/Pods-Google Contacts ViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FAC5D870A67D1DAECCD7DB63 /* Pods-ContactsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsAppTests/Pods-ContactsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B2ABC0DC583584D8F3B9E6C /* Pods_Google_Contacts_Viewer.framework in Frameworks */,
+				53763AC139FA22A941D25E3A /* Pods_ContactsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B4D459288B561D6A2E6E2B /* Pods_Google_Contacts_ViewerTests.framework in Frameworks */,
+				4F97128DBAFA0E69D0D39AC5 /* Pods_ContactsAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3866056354719C1DAEAE4ADC /* Pods_Google_Contacts_ViewerUITests.framework in Frameworks */,
+				AB3887C29B60051696A0EB67 /* Pods_ContactsAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +263,9 @@
 		E1A150417CA3FC671F094FAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F828143DF5F6E261C8C9D03 /* Pods_Google_Contacts_Viewer.framework */,
-				A78D231ADBBCC60716C76CA9 /* Pods_Google_Contacts_ViewerTests.framework */,
-				2A7291190E2A198F8019F5FE /* Pods_Google_Contacts_ViewerUITests.framework */,
+				78039EB9183952AA4014FA4F /* Pods_ContactsApp.framework */,
+				667FE5B0B4BF9EE272F95BB5 /* Pods_ContactsAppTests.framework */,
+				3A64E5A6F94AFEAB6338BBC5 /* Pods_ContactsAppUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,6 +279,12 @@
 				851E1625D44ECD3580AE31F1 /* Pods-Google Contacts ViewerTests.release.xcconfig */,
 				C81E59BE0E37A4485205D628 /* Pods-Google Contacts ViewerUITests.debug.xcconfig */,
 				F7ED805116FA5FFF4F03EEE8 /* Pods-Google Contacts ViewerUITests.release.xcconfig */,
+				D9439EB07C7074FE9246B4A8 /* Pods-ContactsApp.debug.xcconfig */,
+				2C6CEFDEA3CB099BE516408D /* Pods-ContactsApp.release.xcconfig */,
+				2F78629AF4175DCC9ED12154 /* Pods-ContactsAppTests.debug.xcconfig */,
+				FAC5D870A67D1DAECCD7DB63 /* Pods-ContactsAppTests.release.xcconfig */,
+				40CE9B5D21D793F6D6B5CDEC /* Pods-ContactsAppUITests.debug.xcconfig */,
+				051280512868AFD621AA194B /* Pods-ContactsAppUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -345,7 +357,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1030;
 				TargetAttributes = {
 					74F261161E0090190021AA75 = {
 						CreatedOnToolsVersion = 8.1;
@@ -371,6 +383,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -432,7 +445,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Google Contacts ViewerTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ContactsAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -445,7 +458,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ContactsApp/Pods-ContactsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CRToast/CRToast.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -464,7 +477,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ContactsApp/Pods-ContactsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4EA81CACD5349D2FA669B8A /* [CP] Check Pods Manifest.lock */ = {
@@ -478,7 +491,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Google Contacts ViewerUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ContactsAppUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -491,7 +504,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ContactsApp/Pods-ContactsApp-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -500,7 +513,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google Contacts Viewer/Pods-Google Contacts Viewer-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ContactsApp/Pods-ContactsApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF67F3ED86257E6CF61BBBFF /* [CP] Check Pods Manifest.lock */ = {
@@ -514,7 +527,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Google Contacts Viewer-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ContactsApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -599,20 +612,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -642,6 +665,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -649,20 +673,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -684,13 +718,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		74F261431E00901A0021AA75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68719316DB7DE347336FA756 /* Pods-Google Contacts Viewer.debug.xcconfig */;
+			baseConfigurationReference = D9439EB07C7074FE9246B4A8 /* Pods-ContactsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -703,13 +738,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google Contacts Viewer/Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		74F261441E00901A0021AA75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92D1EBF0E6BDCA347B83485D /* Pods-Google Contacts Viewer.release.xcconfig */;
+			baseConfigurationReference = 2C6CEFDEA3CB099BE516408D /* Pods-ContactsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -722,13 +757,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google Contacts Viewer/Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		74F261461E00901A0021AA75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D9CF4E9D4D67CA2E5337ABA /* Pods-Google Contacts ViewerTests.debug.xcconfig */;
+			baseConfigurationReference = 2F78629AF4175DCC9ED12154 /* Pods-ContactsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -744,7 +779,7 @@
 		};
 		74F261471E00901A0021AA75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 851E1625D44ECD3580AE31F1 /* Pods-Google Contacts ViewerTests.release.xcconfig */;
+			baseConfigurationReference = FAC5D870A67D1DAECCD7DB63 /* Pods-ContactsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -760,7 +795,7 @@
 		};
 		74F261491E00901A0021AA75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C81E59BE0E37A4485205D628 /* Pods-Google Contacts ViewerUITests.debug.xcconfig */;
+			baseConfigurationReference = 40CE9B5D21D793F6D6B5CDEC /* Pods-ContactsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = J8HX8YBEEF;
@@ -775,7 +810,7 @@
 		};
 		74F2614A1E00901A0021AA75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7ED805116FA5FFF4F03EEE8 /* Pods-Google Contacts ViewerUITests.release.xcconfig */;
+			baseConfigurationReference = 051280512868AFD621AA194B /* Pods-ContactsAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = J8HX8YBEEF;

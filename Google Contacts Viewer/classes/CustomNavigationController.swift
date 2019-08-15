@@ -16,6 +16,6 @@ class CustomNavigationController: UINavigationController {
         nav.barStyle = UIBarStyle.black
         nav.barTintColor = UIColor.colorFromHex(rgbValue: 0x518793)
         nav.tintColor = UIColor.white
-        nav.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        nav.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }

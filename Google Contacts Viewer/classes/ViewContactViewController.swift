@@ -20,7 +20,7 @@ class ViewContactViewController: UITableViewController, MFMailComposeViewControl
         let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = delegate.persistentContainer.viewContext
         
-        doc = context.object(with: coreDataId) as! GoogleContact
+        doc = (context.object(with: coreDataId) as! GoogleContact)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -56,7 +56,7 @@ class ViewContactViewController: UITableViewController, MFMailComposeViewControl
         imageView.layer.cornerRadius = 50
         imageView.clipsToBounds = true
         if doc.url != nil {
-            imageView.sd_setImage(with: NSURL(string: doc.url!) as! URL, placeholderImage:UIImage(named:"contacts_big.png")!)
+            imageView.sd_setImage(with: URL(string: doc.url!), placeholderImage:UIImage(named:"contacts_big.png")!)
         } else {
             imageView.image = UIImage(named:"contacts_big.png")
         }
@@ -98,8 +98,8 @@ class ViewContactViewController: UITableViewController, MFMailComposeViewControl
             let CellIdentifier = "ViewControllerTableViewCell"
             var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
             if (cell == nil) {
-                cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: CellIdentifier)
-                cell?.selectionStyle = UITableViewCellSelectionStyle.gray
+                cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: CellIdentifier)
+                cell?.selectionStyle = UITableViewCell.SelectionStyle.gray
                 cell?.detailTextLabel?.font = UIFont.systemFont(ofSize: 12)
                 cell?.textLabel?.font = UIFont.systemFont(ofSize: 16)
             }

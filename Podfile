@@ -4,7 +4,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 
-target 'Google Contacts Viewer' do
+target 'ContactsApp' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
@@ -15,12 +15,12 @@ target 'Google Contacts Viewer' do
   pod 'libPhoneNumber-iOS'
 
 
-  target 'Google Contacts ViewerTests' do
+  target 'ContactsAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'Google Contacts ViewerUITests' do
+  target 'ContactsAppUITests' do
     inherit! :search_paths
     # Pods for testing
   end

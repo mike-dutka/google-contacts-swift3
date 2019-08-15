@@ -17,6 +17,7 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
 
     let animator = TransitionAnimator()
     static let cacheName: String? = "ViewControllerCacheName"
+    private var fetchDelegate: FetchDelegate?
     private var _fetchedResultsController: NSFetchedResultsController<GoogleContact>?
     private var fetchedResultsController: NSFetchedResultsController<GoogleContact> {
         get {
@@ -32,7 +33,8 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
                 ]
                 
                 _fetchedResultsController = NSFetchedResultsController(fetchRequest: query, managedObjectContext: context, sectionNameKeyPath: "name", cacheName: ViewController.cacheName)
-                _fetchedResultsController?.delegate = FetchDelegate(tableView: self.tableView)
+                fetchDelegate = FetchDelegate(tableView: self.tableView)
+                _fetchedResultsController?.delegate = fetchDelegate
             }
             return _fetchedResultsController!
         }
@@ -64,11 +66,11 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         }
     }
     
-    func signIn() {
+    @objc func signIn() {
         GIDSignIn.sharedInstance().signIn()
     }
     
-    func signOut() {
+    @objc func signOut() {
         let alert = UIAlertController(title: "Confirm", message: "Are you sure?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Yes", style: .destructive) { (action) in
             GIDSignIn.sharedInstance().signOut()
@@ -90,10 +92,10 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         self.navigationController?.present(alert, animated: true, completion: nil)
     }
     
-    func refresh() {
+    @objc func refresh() {
         let options = [
             kCRToastTextKey: "Refreshing data ...",
-            kCRToastTextAlignmentKey : kCAAlignmentCenter,
+            kCRToastTextAlignmentKey : CATextLayerAlignmentMode.center,
             kCRToastBackgroundColorKey : UIColor.colorFromHex(rgbValue: 0x518793),
             kCRToastAnimationInTypeKey : CRToastAnimationType.gravity,
             kCRToastAnimationOutTypeKey : CRToastAnimationType.gravity,
@@ -111,7 +113,7 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         // Dispose of any resources that can be recreated.
     }
     
-    func loadData() {
+    @objc func loadData() {
         self.setBarButtonItems()
         NSFetchedResultsController<NSFetchRequestResult>.deleteCache(withName: ViewController.cacheName)
         do {
@@ -128,7 +130,7 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections?[section] as NSFetchedResultsSectionInfo!
+        let sectionInfo = self.fetchedResultsController.sections?[section]
         if sectionInfo == nil {
             return 0
         }
@@ -140,8 +142,8 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
             let CellIdentifier = "ViewControllerTableViewCell"
             var cell: ContactCell? = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) as? ContactCell
             if (cell == nil) {
-                cell = ContactCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: CellIdentifier)
-                cell?.selectionStyle = UITableViewCellSelectionStyle.gray
+                cell = ContactCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: CellIdentifier)
+                cell?.selectionStyle = UITableViewCell.SelectionStyle.gray
                 cell?.detailTextLabel?.font = UIFont.systemFont(ofSize: 12)
                 cell?.textLabel?.font = UIFont.systemFont(ofSize: 16)
                 cell?.accessoryType = .disclosureIndicator
@@ -162,7 +164,7 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         }
         
         if doc.url != nil {
-            cell.imageView!.sd_setImage(with: NSURL(string: doc.url!) as! URL, placeholderImage:UIImage(named:"contacts.png")!)
+            cell.imageView!.sd_setImage(with: URL(string: doc.url!), placeholderImage:UIImage(named:"contacts.png")!)
         } else {
             cell.imageView!.image = UIImage(named:"contacts.png")
         }
@@ -177,8 +179,8 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if (operation == UINavigationControllerOperation.push) {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if (operation == UINavigationController.Operation.push) {
             return self.animator
         }
         return nil
