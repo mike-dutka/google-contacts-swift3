@@ -28,8 +28,6 @@ class ViewController: UITableViewController, GIDSignInUIDelegate, UINavigationCo
                 query.sortDescriptors = [
                     NSSortDescriptor(key: "isInGroup", ascending: false),
                     NSSortDescriptor(key: "name", ascending: true),
-                    NSSortDescriptor(key: "email", ascending: true),
-                    NSSortDescriptor(key: "primaryPhoneNumber", ascending: true)
                 ]
                 
                 _fetchedResultsController = NSFetchedResultsController(fetchRequest: query, managedObjectContext: context, sectionNameKeyPath: "isInGroup", cacheName: ViewController.cacheName)
