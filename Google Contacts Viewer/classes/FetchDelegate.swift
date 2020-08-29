@@ -50,6 +50,8 @@ class FetchDelegate: NSObject, NSFetchedResultsControllerDelegate {
                     self.tableView.insertRows(at: [newIndexPath], with: .fade)
                 }
             }
+        @unknown default:
+            break
         }
     }
     

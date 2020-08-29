@@ -132,7 +132,7 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
         if elementName == "entry" {
             self.currentObject = GoogleContact(context: self.context)
             
-            let tag = attributeDict["gd:etag"] as! String
+            let tag = attributeDict["gd:etag"]!
             self.currentObject?.tag = tag
         }
     }
@@ -164,7 +164,7 @@ class ContactsHandler: NSObject, GIDSignInDelegate, XMLParserDelegate {
                 var nb_number: NBPhoneNumber? = nil
                 try nb_number = fmt.parse(self.parsingBuffer, defaultRegion: "UA")
                 try self.parsingBuffer = fmt.format(nb_number!, numberFormat: .INTERNATIONAL)
-            } catch let error as NSError {
+            } catch let _ as NSError {
                 NSLog("error")
             }
 

@@ -32,7 +32,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CRToast
     - GoogleSignIn
     - GoogleToolboxForMac
@@ -52,4 +52,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 951e711836c918d4ddf26feccb587899ba5b8ff3
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1

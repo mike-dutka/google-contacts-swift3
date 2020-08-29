@@ -361,7 +361,7 @@
 				TargetAttributes = {
 					74F261161E0090190021AA75 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = VMRKSX5B84;
+						DevelopmentTeam = 5QKFZE2DQB;
 						ProvisioningStyle = Automatic;
 					};
 					74F2612D1E0090190021AA75 = {
@@ -380,10 +380,9 @@
 			};
 			buildConfigurationList = 74F261121E0090190021AA75 /* Build configuration list for PBXProject "ContactsApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -730,7 +729,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VMRKSX5B84;
+				DEVELOPMENT_TEAM = 5QKFZE2DQB;
 				INFOPLIST_FILE = "Google Contacts Viewer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -749,7 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VMRKSX5B84;
+				DEVELOPMENT_TEAM = 5QKFZE2DQB;
 				INFOPLIST_FILE = "Google Contacts Viewer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
